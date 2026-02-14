@@ -1,0 +1,76 @@
+erDiagram
+    hotels {
+        SERIAL hotel_id PK
+        VARCHAR hotel_name
+    }
+
+    countries {
+        SERIAL country_id PK
+        VARCHAR country_code
+    }
+
+    meal_types {
+        SERIAL meal_id PK
+        VARCHAR meal_name
+    }
+
+    market_segments {
+        SERIAL segment_id PK
+        VARCHAR segment_name
+    }
+
+    distribution_channels {
+        SERIAL channel_id PK
+        VARCHAR channel_name
+    }
+
+    customer_types {
+        SERIAL type_id PK
+        VARCHAR type_name
+    }
+
+    deposit_types {
+        SERIAL deposit_id PK
+        VARCHAR deposit_name
+    }
+
+    room_types {
+        SERIAL room_id PK
+        VARCHAR room_code
+    }
+
+    bookings {
+        SERIAL booking_id PK
+        INT hotel_id FK
+        INT country_id FK
+        INT meal_id FK
+        INT segment_id FK
+        INT channel_id FK
+        INT type_id FK
+        INT deposit_id FK
+        INT reserved_room_id FK
+        INT assigned_room_id FK
+        INT is_canceled
+        INT lead_time
+        INT arrival_date_year
+        VARCHAR arrival_date_month
+        INT stays_in_weekend_nights
+        INT stays_in_week_nights
+        INT adults
+        INT children
+        INT babies
+        DECIMAL adr
+        INT total_of_special_requests
+        VARCHAR reservation_status
+        DATE reservation_status_date
+    }
+
+    hotels ||--o{ bookings : "has"
+    countries ||--o{ bookings : "from"
+    meal_types ||--o{ bookings : "includes"
+    market_segments ||--o{ bookings : "sourced from"
+    distribution_channels ||--o{ bookings : "booked via"
+    customer_types ||--o{ bookings : "classified as"
+    deposit_types ||--o{ bookings : "secured by"
+    room_types ||--o{ bookings : "reserved as"
+    room_types ||--o{ bookings : "assigned as"
