@@ -201,9 +201,11 @@ hotel-booking-demand-analysis/
 |-- sql/
 |   |-- Hotel Booking Database.sql
 |
+|-- Assets/
+|   |-- Hotel Booking Performance Analytics.png
+|
 |-- powerbi/
 |   |-- hotel_bookings.pbix
-|   |-- Hotel Booking Performance Analytics.png
 |
 |-- Datasets/
 |   |-- hotel_bookings.csv
@@ -271,7 +273,7 @@ The SQL component of this project demonstrates proficiency across the following 
 
 The interactive dashboard consolidates the analytical findings into a single-page executive view, designed for both strategic and operational stakeholders.
 
-![Hotel Booking Performance Analytics](./powerbi/Hotel%20Booking%20Performance%20Analytics.png)
+![Hotel Booking Performance Analytics](./Assets/Hotel%20Booking%20Performance%20Analytics.png)
 
 ### Dashboard Components
 
